@@ -1,0 +1,8 @@
+
+var baju = 0;
+
+if ( baju < 20 ) {
+	Print "baju kurang dari 20"
+} else {
+	Print "baju sudah 20"
+}

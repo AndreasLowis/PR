@@ -1,0 +1,9 @@
+var murid = [isi 40 nama]
+
+for ( i = 0; i < murid.length, i++ ) {
+	if ( murid[i] = kuku panjang ) {
+		PRINT "hukum"
+	} else if (murid[i] = kuku pendek) {
+		PRINT "puji"
+	}
+}

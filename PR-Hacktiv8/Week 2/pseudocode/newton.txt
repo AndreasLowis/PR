@@ -1,0 +1,4 @@
+READ resultan gaya (Newton)
+READ massa benda (kg)
+COMPUTE resultan gaya (Newton) times massa benda (kg)
+SHOW result

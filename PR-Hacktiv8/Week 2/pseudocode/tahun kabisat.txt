@@ -1,0 +1,5 @@
+IF ( tahun % 4 = 0 && tahun % 100 != 0 || tahun % 4 = 0 && tahun % 100 = 0 && tahun % 400 = 0 ) THEN
+PRINT Tahun Kabisat 
+ELSE
+PRINT bukan Tahun Kabisat
+ENDIF
