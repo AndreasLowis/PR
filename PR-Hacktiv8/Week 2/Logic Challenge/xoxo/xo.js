@@ -1,45 +1,26 @@
+function xo(string) {
 var counterA = 0;
 var counterB = 0;
-
-function x(string) {
   for ( i = 0; i < string.length; i++ ) {
-  	if ( string[i] === 'x' ) {
-  	counterA += 1;
+    if ( string[i] === 'x' ) {
+    counterA += 1;
+  } else if ( string[i] === 'o' ) {
+    counterB += 1;
   } 
 } 
-  return counterA;
-}
+  console.log(counterA, counterB);
 
-function o(string) {
-  for ( i = 0; i < string.length; i++ ) {
-  	if ( string[i] === 'o' ) {
-  	counterB += 1;
-  } 
-} 
-  return counterB;
-}
-
-function xo(string) {
-  	if ( counterA = counterB ) {
-  	true;
+  if ( counterA == counterB ) {
+    return true;
   } else {
-  	false;
+    return false;
   }
+
 }
 
-  console.log(xo("xxxooxxxoxxx"));
-
-/*
 // TEST CASES
 console.log(xo('xoxoxo')); // true
 console.log(xo('oxooxo')); // false
 console.log(xo('oxo')); // false
 console.log(xo('xxxooo')); // true
 console.log(xo('xoxooxxo')); // true
-
-  if ( a = b ) {
-  	console.log("true")
-  } else {
-  	console.log("false")
-  }
-*/
