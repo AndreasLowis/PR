@@ -47,7 +47,7 @@ switch (bulan) {
 		break;
 
 	default:
-		console.log('salah');
+		console.log('bulan salah');
 		break;
 }
 
