@@ -17,11 +17,14 @@ function groupAnimals(animals) {
   }
 
   for( i = 0; i < tampung.length; i++ ) {
-    if( tampung[i] > tampung[i+1] ){
-      var temp = tampung[i];
-      tampung[i] = tampung[i+1];
-      tampung[i+1] = temp;
+    for( k = 0; k < tampung.length; k++ ) {
+      if( tampung[k] > tampung[k+1] ){
+        var temp = tampung[k];
+        tampung[k] = tampung[k+1];
+        tampung[k+1] = temp;
+      }
     }
+
   }
   return(tampung);
 }

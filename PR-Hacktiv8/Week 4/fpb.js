@@ -1,7 +1,14 @@
 function fpb(angka1, angka2) {
   // you can only write your code here!
-  
+  var a;
+  while ((angka1 % angka2) >= 0){
+    a = angka1;
+    angka1 = angka2;
+    angka2 = a % angka2;
+  }
+  return angka1;
 }
+
 
 // TEST CASES
 console.log(fpb(12, 16)); // 4

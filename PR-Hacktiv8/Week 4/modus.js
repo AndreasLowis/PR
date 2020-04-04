@@ -3,8 +3,35 @@ function cariModus(arr) {
   var tampung = [];
 
   for( i = 0; i < arr.length; i++ ) {
-    
+    var check = false;
+    for( j = 0; j < tampung.length; j++ ) {
+      if( arr[i] == tampung[j][0] ){
+        tampung[j].push(arr[i]);
+        check = true;
+      }
+
+    }
+    if( check == false ){
+      tampung.push([arr[i]]);
+    }
   }
+
+  var modus = '';
+  
+  for( i = 0; i < tampung.length; i++ ) {
+    for( k = 0; k < tampung.length -1 ; k++ ) {
+      if( tampung[k].length < tampung[k+1].length ){
+        var temp = tampung[k];
+        tampung[k] = tampung[k+1];
+        tampung[k+1] = temp;
+      }
+    }
+  }
+
+  if( tampung[0].length == 1 || tampung.length ==1){
+    return "-1"
+  } else return(tampung[0][0]);
+
 }
 
 // TEST CASES
