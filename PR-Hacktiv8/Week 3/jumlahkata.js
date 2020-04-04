@@ -2,12 +2,11 @@ function hitungJumlahKata(kalimat) {
     // you can only write your code here!
     var jumlah = 1;
     for( i = 0; i < kalimat.length; i++ ) {
-      if( kalimat[i] == ' ' ) {
+      if( kalimat[i] == ' ' && kalimat[i-1] != ' ' && kalimat[i+1] != ' ') {
         jumlah += 1;
       }
     }
     return jumlah;
-
 }
   
   // TEST CASES

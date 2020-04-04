@@ -24,10 +24,24 @@ function targetTerdekat(arr) {
     } 
     // console.log(c);
   
-    var min = Math.min(...c);
-    if ( min !== Infinity ) {
-      return min;
-    } else return 0;
+    // var min = Math.min(...c);
+    // if ( min !== Infinity ) {
+    //   return min;
+    // } else return 0;
+
+    var x = Infinity;
+    for( i = 0; i < c.length; i++ ) {
+      if( c[i] < x ) {
+        x = c[i];
+      } 
+    }
+    
+    if ( x == Infinity ) {
+      return 0;
+    }
+
+    return x;
+
     
 
 }

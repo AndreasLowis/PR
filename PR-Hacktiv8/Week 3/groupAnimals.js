@@ -15,8 +15,15 @@ function groupAnimals(animals) {
       tampung.push([animals[i]]);
     }
   }
-  var sort = tampung.sort()
-  return(sort);
+
+  for( i = 0; i < tampung.length; i++ ) {
+    if( tampung[i] > tampung[i+1] ){
+      var temp = tampung[i];
+      tampung[i] = tampung[i+1];
+      tampung[i+1] = temp;
+    }
+  }
+  return(tampung);
 }
 
 // TEST CASES
