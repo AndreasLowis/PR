@@ -68,6 +68,29 @@ function urutkanAbjad(str) {
     return tampung;
 }
 
+//cara 2
+
+function urutkanAbjad(str) {
+    // you can only write your code here!
+    var array = [];
+
+    for( i = 0; i < str.length; i++ ) {
+        array.push(str[i]);
+    }
+
+    // console.log(array);
+
+      for( i = 0; i < array.length; i++ ) {
+          for( j = 0; j < array.length; j++ ){
+              if( array[j] > array[j+1] ){
+                var temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+              }
+          }
+      }
+      return array.join('');
+  }
 
 // TEST CASES
 console.log(urutkanAbjad('hello')); // 'ehllo'
