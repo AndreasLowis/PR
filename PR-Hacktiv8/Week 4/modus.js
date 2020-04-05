@@ -16,7 +16,7 @@ function cariModus(arr) {
     }
   }
 
-  var modus = '';
+  console.log(tampung); // awal
   
   for( i = 0; i < tampung.length; i++ ) {
     for( k = 0; k < tampung.length -1 ; k++ ) {
@@ -28,7 +28,10 @@ function cariModus(arr) {
     }
   }
 
-  if( tampung[0].length == 1 || tampung.length ==1){
+  console.log(tampung); // sudah di urutkan
+
+
+  if( tampung[0].length == 1 || tampung.length == 1){
     return "-1"
   } else return(tampung[0][0]);
 
