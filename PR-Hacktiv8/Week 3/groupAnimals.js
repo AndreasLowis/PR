@@ -16,21 +16,24 @@ function groupAnimals(animals) {
     }
   }
 
-  for( i = 0; i < tampung.length; i++ ) {
-    for( k = 0; k < tampung.length; k++ ) {
-      if( tampung[k] > tampung[k+1] ){
-        var temp = tampung[k];
-        tampung[k] = tampung[k+1];
-        tampung[k+1] = temp;
-      }
-    }
+  // console.log(tampung);
 
-  }
+  // for( i = 0; i < tampung.length; i++ ) {
+  //   for( k = 0; k < tampung.length - 1 ; k++ ) {
+  //     if( tampung[k][0] > tampung[k+1][0] ){
+  //       var temp = tampung[k];
+  //       tampung[k] = tampung[k+1];
+  //       tampung[k+1] = temp;
+        
+  //     }
+  //   }
+  // }
+
   return(tampung);
 }
 
 // TEST CASES
 console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil']));
 // [ ['ayam', 'anoa'], ['cacing'], ['kuda', 'kancil'] ]
-console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'cicak' ]));
-// [ ['ayam', 'anoa'], ['cacing', 'cicak'], ['kuda', 'kancil'], ['unta'] ]
+// console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'cicak' ]));
+// // [ ['ayam', 'anoa'], ['cacing', 'cicak'], ['kuda', 'kancil'], ['unta'] ]
