@@ -1,6 +1,6 @@
 var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
 
-var input2 = ["0002", "Romansddsf asdasd", "Bandarasdasd Lamasdpung", "21/05/1990", "Membasdasdaca"];
+// var input2 = ["0002", "Romansddsf asdasd", "Bandarasdasd Lamasdpung", "21/05/1990", "Membasdasdaca"];
 
 function dataHandling2(array){
     array.splice(1, 4, "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro");
@@ -9,15 +9,15 @@ console.log(array);
 
 var a = array[3];
 
-console.log(a);
+// console.log(a);
 
 var b = a.split("/");
 
-console.log(b);
+// console.log(b);
 
 var c = b[1];
 
-console.log(c);
+// console.log(c);
 
 switch(c) {
     case "01" :
@@ -66,7 +66,9 @@ console.log(d);
 
 var e = array[1].split("");
 
-console.log(e);
+// console.log(e);
+
+// console.log(array[3]); --- yang ini lupa ditulis, jd output tidak ada tanggal
 
 e.splice(15, 10 );
 
