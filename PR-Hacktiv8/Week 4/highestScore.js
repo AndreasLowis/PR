@@ -1,11 +1,49 @@
-{
-  <class>: { name: <name>, score: <score> },
-  <class>: { name: <name>, score: <score> },
-  <class>: { name: <name>, score: <score> }
-}
 function highestScore (students) {
   // Code disini
+  if( students.length == 0 ){
+    return {};
+  }
+
+  var hasil = {}
+    
+  for( var i = 0; i < students.length; i++ ) {
+    var student = students[i];
+    var obj = {}
+    obj.name = student.name
+    obj.score = student.score
+    if( hasil[student.class] === undefined ){
+      hasil[student.class] = obj
+    } else if( student.score > hasil[student.class].score ){
+      hasil[student.class].score = student.score
+      hasil[student.class].name = student.name
+    }
+  }
+  return hasil;
 }
+
+console.log(highestScore([
+  {
+    name: 'William',
+    score: 70,
+    class: 'wolves'
+  },
+  {
+    name: 'Henry',
+    score: 100,
+    class: 'foxes'
+  },
+  {
+    name: 'Alisa',
+    score: 90,
+    class: 'wolves'
+  },
+]));
+// {
+//   wolves: { name: 'Alisa', score: 90 },
+//   foxes: { name: 'Henry', score: 100 }
+// }
+
+console.log(highestScore([])); //{}
 
 // TEST CASE
 console.log(highestScore([
@@ -72,4 +110,3 @@ console.log(highestScore([
 // }
 
 
-console.log(highestScore([])); //{}

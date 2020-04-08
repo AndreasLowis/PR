@@ -1,18 +1,32 @@
-[
-    [
-      [1, 2, 3],
-      [1, 2, 3]
-    ],
-    [
-      [1, 2, 3],
-      [1, 2],
-      [1]
-    ]
-  ]
-
-
 function deepSum (arr) {
   // Code disini
+
+    if( arr.length === 0 ){
+        return "No Number"
+    }
+    
+    var hasil = [];
+
+    for( var k = 0; k < arr.length; k++ ) {
+        for( var i = 0; i < arr[k].length; i++ ) {
+        var total = 0;
+            for( var j = 0; j < arr[k][i].length; j++ ){
+                if( arr[k][i][j] == undefined ){
+                total += 0;
+                }
+                total += arr[k][i][j]
+            }
+            hasil.push(total);
+        }  
+    }
+
+    var hasilYangSesungguhnya = 0;
+
+    for( var i = 0; i < hasil.length; i++ ) {
+        hasilYangSesungguhnya += hasil[i]
+    }
+
+    return hasilYangSesungguhnya;
 }
 
 //TEST CASE

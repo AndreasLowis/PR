@@ -1,16 +1,43 @@
-{
-  <class>: [
-    { name: <name>, score: <score> },
-    ...
-  ],
-  <class>: [
-    { name: <name>, score: <score> },
-    ...
-  ],
-  <class>: [] //NOTE: Jika tidak ada student yang lulus, class ini akan diisi oleh array kosong
-}
+// {
+//   <class>: [
+//     { name: <name>, score: <score> },
+//     ...
+//   ],
+//   <class>: [
+//     { name: <name>, score: <score> },
+//     ...
+//   ],
+//   <class>: [] //NOTE: Jika tidak ada student yang lulus, class ini akan diisi oleh array kosong
+// }
+
+// Student dapat dinyatakan lulus apabila score lebih besar dari 75.
+// Masukkan name dan score dari student ke class yang dia ikuti.
+// Student yang tidak lulus tidak perlu ditampilkan.
+
 function graduates (students) {
   // Code disini
+  var hasil = {}
+
+  if( students.length == 0 ){
+    return []
+  }
+
+  for( var i = 0; i < students.length; i++ ) {
+    var obj = {
+      name : students[i].name,
+      score : students[i].score
+    }
+    
+    if( students[i].score > 75 ){
+      if( hasil[students[i].class] == undefined ){
+        hasil[students[i].class] = [obj]
+      } else {
+        hasil[students[i].class].push(obj)
+      }
+    }
+  }
+
+  return hasil
 }
 
 console.log(graduates([

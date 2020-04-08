@@ -46,7 +46,6 @@ function shoppingTime(memberId, money) {
             obj.listPurchased.push(item.name);
             money -= item.price;
         } 
-
     }
 
     obj.changeMoney = money;

@@ -1,6 +1,6 @@
 function changeMe(arr) {
   // you can only write your code here!
-  var array = {};
+  var hasil = {};
   
 
   for( i = 0; i < arr.length; i++ ) {
@@ -12,9 +12,9 @@ function changeMe(arr) {
       obj.age = 'Invalid Birth Year';
     } else obj.age = Math.abs(arr[i][3] - 2020);
     
-    array[i+1 + ". " + arr[i][0] + " " + arr[i][1]] = obj;
+    hasil[i+1 + ". " + arr[i][0] + " " + arr[i][1]] = obj;
   }
-  return array;
+  return hasil;
 }
 
 // TEST CASES
