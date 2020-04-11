@@ -9,12 +9,12 @@ function fpb(angka1, angka2) {
 
   // return angka1;
 
-  // if(angka2 == 0) {
-  //   return angka1;
-  // } else {
-  //   a = angka1 % angka2;
-  //   return fpb( angka2, a );
-  // }
+  if(angka2 == 0) {
+    return angka1;
+  } else {
+    var a = angka1 % angka2;
+    return fpb( angka2, a );
+  }
 
 
 }
