@@ -1,6 +1,6 @@
 function fpb(angka1, angka2) {
   // you can only write your code here!
-  var a;
+  // var a;
   // while ((angka1 % angka2) >= 0){
   //   a = angka1;
   //   angka1 = angka2;
@@ -13,10 +13,8 @@ function fpb(angka1, angka2) {
     return angka1;
   } else {
     var a = angka1 % angka2;
-    return fpb( angka2, a );
+    return 0 + fpb( angka2, a );
   }
-
-
 }
 
 

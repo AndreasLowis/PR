@@ -5,20 +5,19 @@ function getUnique(votes) {
     // your code here
     var tampung = [];
 
-
     for( i = 0; i < votes.length; i++ ) {
         var check = false;
         
         for( var j = 0; j < tampung.length; j++ ){
             if( votes[i] == tampung[j] ){
-                check = true     
-            }
- 
-            if( check == false ){
-                tampung.push(votes[i])
+                check = true   
+                break;  
             }
         }
-
+        
+        if( check == false ){
+            tampung.push(votes[i])
+        }
 
     }
         
