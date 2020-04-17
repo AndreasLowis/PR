@@ -14,12 +14,8 @@
 // NOTE:
 // Semua manipulasi string (changeVocals, reverseWord, setLowerUpperCase, removeSpaces) diletakkan di passwordGenerator dan return password-nya dari function ini juga
 
-
-
 function changeVocals(str){
   
-
-
   var vocals = "aeiouAEIOU"
   var nextLetters = "bfjpvBFJPV"
   var strTemp = ""
